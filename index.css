@@ -1,0 +1,166 @@
+body {
+  background-color: #191d28;
+  padding: 34px;
+}
+
+h1 {
+  text-align: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #6ccacb;
+}
+
+.inr-btc {
+  font-size: 20px;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  gap: 25px;
+}
+
+.inr {
+  padding: 10px;
+  background-color: #2e3241;
+  border-radius: 12px;
+  font-size: x-large;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.fa-solid {
+  padding-right: 2px;
+}
+.btc {
+  padding: 10px;
+  background-color: #2e3241;
+  border-radius: 12px;
+  font-size: x-large;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.buy-btc {
+  padding: 10px;
+  background-color: #2e3241;
+  border-radius: 12px;
+  font-size: x-large;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.crypto-percentage {
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #6ccacb;
+}
+
+.average-time {
+  margin-top: -30px;
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #818389;
+}
+
+.average-time {
+}
+
+.best-price {
+  color: #818389;
+  font-size: 22px;
+  margin-bottom: -60px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.average-btc-price {
+  font-size: 65px;
+  color: white;
+}
+.average-btc-inr {
+  margin-top: -55px;
+  padding-left: 30px;
+  font-size: 16px;
+  color: #818389;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.telegram {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background-color: #6ccacb;
+  border: none;
+  font-size: large;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.fa-telegram {
+  padding-right: 5px;
+}
+
+.average-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+table {
+  border-spacing: 50px;
+  margin: auto;
+}
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+.crypto-row {
+  background-color: #2e3241;
+  margin-bottom: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  border-radius: 10px !important;
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  border-radius: 50px;
+}
+
+.crypto-table th {
+  padding: 8px;
+  color: #818389;
+}
+
+.crypto-table td {
+  padding: 8px;
+}
+
+.crypto-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}

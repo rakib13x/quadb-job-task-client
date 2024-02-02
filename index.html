@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HodlInfo</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="logo">HODLINFO</div>
+            <div class="inr-btc">
+                <p class="inr">INR <i class="fa-solid fa-caret-down"></i></p>
+                <p class="btc">BTC <i class="fa-solid fa-caret-down"></i></p>
+                <p class="buy-btc">BUY BTC</p>
+            </div>
+            <div><button class="telegram"><i class="fa-brands fa-telegram"></i>Connect Telegram</button></div>
+        </div>
+    </div>
+
+    
+
+    <div class="average-data">
+        <div class="5-mins">
+            <div>
+                <p class="crypto-percentage">0.34%</p>
+                <p class="average-time">5Mins</p>
+            </div>
+        </div>
+        <div class="1-hour">
+            <div>
+                <p class="crypto-percentage">0.96%</p>
+                <p class="average-time">1 hour</p>
+            </div>
+        </div>
+        <div class="average-btc">
+            <h1 class="best-price">Best Price To Trade</h1>
+            <div>
+                <p class="average-btc-price">₹39,56,110</p>
+                
+            </div>
+            <h6 class="average-btc-inr">Average BTC/INR price</h6>
+        </div>
+        <div class="1-day">
+            <div>
+                <p class="crypto-percentage">0.34%</p>
+                <p class="average-time">1 day</p>
+            </div>
+        </div>
+        <div class="7-days">
+            <div>
+                <p class="crypto-percentage">0.34%</p>
+                <p class="average-time">7 days</p>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/abc77f5644.js" crossorigin="anonymous"></script>
+    <div>
+        <table class="crypto-table">
+            <thead>
+                <tr class="crypto-title">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Last</th>
+                    <th>Buy/Sell</th>
+                    <th>Low/High</th>
+                    <th>Volume</th>
+                </tr>
+            </thead>
+            <tbody id="cryptoTableBody">
+                
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function fetchData() {
+            axios.get('https://quadb-n4tj.onrender.com/crypto/data')
+                .then(response => {
+                    displayCryptoData(response);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+        function displayCryptoData(response) {
+  const success = response.data.success;
+  const cryptoDataArray = response.data.cryptoDataArray || [];
+
+
+  const tableBody = document.getElementById("cryptoTableBody");
+
+
+  tableBody.innerHTML = '';
+
+  if (success && Array.isArray(cryptoDataArray)) {
+    
+    cryptoDataArray.forEach((crypto, index) => {
+      const row = tableBody.insertRow();
+      row.classList.add("crypto-row");
+
+      row.insertCell(0).innerText = index + 1;
+      row.insertCell(1).innerText = crypto.name;
+      row.insertCell(2).innerText = crypto.last;
+      row.insertCell(3).innerText = `₹${crypto.buy} / ₹${crypto.sell}`;
+      row.insertCell(4).innerText = `₹${crypto.low} / ₹${crypto.high}`;
+      row.insertCell(5).innerText = `₹${crypto.volume}`;
+    });
+  } else {
+    console.error('Invalid data format:', response.data);
+  }
+}
+
+
+fetchData();
+
+
+
+        fetchData();
+    </script>
+
+</body>
+
+</html>
